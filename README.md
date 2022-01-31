@@ -23,5 +23,5 @@ Converts image/gifs to ascii art using the python [Pillow Libary](https://pillow
                        .,,^^^^^^^^^^^^^^^^^^^,,,^,,,,.                
                         ..,,^^^~~~~~^^^~~~~^~~^^^,,...                                                         
 </pre>
-(mean't to be an apple ^)
+(meant to be an apple ^)<br>
 you can see a gif [here](https://adam-bunce.github.io/vm-to-ascii/)
