@@ -1,5 +1,5 @@
 # vm-to-ascii
-Converts image/gifs to ascii art using the python [Pillow Libary](https://pillow.readthedocs.io/en/stable/)
+Converts images/gifs to ascii art using the python [Pillow Libary](https://pillow.readthedocs.io/en/stable/)
 
 <pre>
                 .........             ^=,                             
