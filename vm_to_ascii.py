@@ -79,7 +79,7 @@ def generate_ascii(fileName, asciiWidth):
 
     array_width = asciiWidth
     array_height = int(array_width * (image.size[1] / image.size[0]))
-    ratio_adjuster = 0.6  # change depending on art use, 0.42 good w/ courier font
+    ratio_adjuster = 0.42  # change depending on art use, 0.42 good w/ courier font
     array_height = int(array_height * ratio_adjuster)
     ascii_array = [[" "] * array_width for i in range(array_height)]
 
