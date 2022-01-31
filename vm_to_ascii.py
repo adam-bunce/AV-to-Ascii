@@ -79,7 +79,8 @@ def generate_ascii(fileName, asciiWidth):
 
     array_width = asciiWidth
     array_height = int(array_width * (image.size[1] / image.size[0]))
-    array_height = int(array_height * .42)  # need to change the compression factor depending on use of art
+    ratio_adjuster = 0.6  # change depending on art use, 0.42 good w/ courier font
+    array_height = int(array_height * ratio_adjuster)
     ascii_array = [[" "] * array_width for i in range(array_height)]
 
     image = image.resize((array_width, array_height))
@@ -119,7 +120,6 @@ def gif_to_ascii(fileName, asciiWidth, num_key_frames):
         filename = "outputFolder/ASCII_Animation.txt"
         file = open(filename, 'a')  # append mode cause you need to add each frame each loop
 
-
         if x == 0:
             file.write("text = [")
         file.write("\"")
@@ -138,12 +138,13 @@ def gif_to_ascii(fileName, asciiWidth, num_key_frames):
 
     # remove all the images created
     for imageNumber in range(num_key_frames):
-        os.remove("outputFolder/"+str(imageNumber) +".png")
+        os.remove("outputFolder/" + str(imageNumber) + ".png")
 
 
-# main !------------------------------------------------------------------
+# main ------------------------------------------------------------------
 # TO CHANGE PALLET/INVERT PALLET change createDensityMap string in generate_ascii method
+# you might need to adjust the aspect ratio of the ascii art, change ratio_adjuster in generate_ascii method
 
-array = generate_ascii("YOUR_IMAGE.JPG", 200)
+array = generate_ascii("IMAGE_NAME.jpg", 150)
 save_array_to_textfile(array)  # save ascii art to a file to copy/paste
-gif_to_ascii("YOUR_GIF.gif", 50, 7)  # create ascii array for javascript animation
+gif_to_ascii("GIF_NAME.gif", 50, 7)  # create array for javascript animation
